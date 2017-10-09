@@ -46,17 +46,24 @@ const DEFAULT_OPTIONS = {
 class UserBehaviorLogger {
 
     constructor() {
+        this._wasInit = false;
         this._maxScrollPercentage = 0;
         this._scrollTimer = null;
     }
 
     init (options) {
+        if (this._wasInit) {
+            throw new Error('Library can\'t be initialized twice.');
+        }
+
         if (options && typeof options !== 'object') {
-            throw new Error('Library options should be an object');
+            throw new Error('Library options should be an object.');
         }
 
         this._setOptions(options);
         this._start();
+
+        this._wasInit = true;
     }
 
     _setOptions (options) {
