@@ -107,8 +107,6 @@ export default class EventsManager {
             additionalData
         });
         this._events.push(eventInfo)
-
-        console.log('Fired event: ', eventInfo);
     }
 
     clearProcessed () {
