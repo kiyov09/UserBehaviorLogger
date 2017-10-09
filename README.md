@@ -8,17 +8,22 @@ attributes to the DOM elements that you what to track and will be notified when 
 generated on those elements.
 
 #### Getting started
-1. Include the library into the html.
-```html
-    <script src="/path/to/lib/UserBehaviorLogger.min.js"></script>
+1. Build the library
+```bash
+  npm install
+  npm run build
 ```
-2. Init the library.
+2. Include the library into the html.
 ```html
-    <script>
-        window.addEventListener("load", function(event) {
-            UBL.init();
-        });
-    </script>
+  <script src="/path/to/lib/UserBehaviorLogger.min.js"></script>
+```
+3. Init the library.
+```html
+  <script>
+    window.addEventListener("load", function(event) {
+        UBL.init();
+    });
+  </script>
 ```
 
 #### Documentation
