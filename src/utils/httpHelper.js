@@ -15,7 +15,7 @@ export default class HttpHelper {
                         status: req.status,
                         data: JSON.parse(req.response)
                     }
-                    req.status === 200 ? resolve(data) : reject(data);
+                    req.status >= 200 && req.status < 300 ? resolve(data) : reject(data);
                 }
             }
             req.responseType = 'json';
