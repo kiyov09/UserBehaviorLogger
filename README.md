@@ -35,7 +35,7 @@ for predefined events:
 ##### Options
 Also, the library supports passing some options to init method to control the library behavior.
 
-This is the default options:
+This are the default options:
 ```javascript
     {
       // Prefix used in attributes (ubl-id ubl-on)
