@@ -13,7 +13,7 @@ export default class HttpHelper {
                 if (req.readyState === 4) {
                     const data = {
                         status: req.status,
-                        data: JSON.parse(req.response)
+                        data: req.response
                     }
                     req.status >= 200 && req.status < 300 ? resolve(data) : reject(data);
                 }

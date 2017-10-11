@@ -232,10 +232,8 @@ class UserBehaviorLogger {
 
         if (eventsToSend) {
             return this._http.postData(eventsToSend)
-                .then( (response) => { 
-                    if (response.status === 200) {
-                        this._eventsManager.clearProcessed();
-                    }
+                .then( () => { 
+                    this._eventsManager.clearProcessed();
                 })
                 .catch( (error) => {
                     console.log(error);
