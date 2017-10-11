@@ -121,11 +121,9 @@ class UserBehaviorLogger {
                     switch (event.type) {
                         case 'copy':
                         case 'cut':
-                            event.stopPropagation();
                             data = {copiedData: document.getSelection().toString()};
                             break;
                         case 'paste':
-                            event.stopPropagation();
                             data = {copiedData: (event.clipboardData || window.clipboardData).getData('Text')};
                             break;
                         case 'change':
